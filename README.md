@@ -1,6 +1,4 @@
 # nyc-traffic-accident-analysis
-# NYC Traffic Accident Analysis
-
 ## Project Overview
 
 This project analyzes the relationship between traffic volume and motor vehicle collisions in New York City. The goal is to move from raw traffic and crash data toward useful insights about when accidents are more likely to occur and whether traffic volume can help predict accident frequency.
