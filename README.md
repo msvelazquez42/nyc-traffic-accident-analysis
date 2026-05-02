@@ -36,7 +36,31 @@ Key columns used:
 | `Persons Injured` | Number of people injured             |
 | `Persons Killed`  | Number of people killed              |
 
-The datasets were merged using time-based features: `month`, `day_of_week`, and `hour`.
+---
+
+## Data Processing
+
+The traffic volume dataset was large, so chunk-based sampling was used to load a manageable subset without crashing the notebook. Only the columns needed for the analysis were selected.
+
+Both datasets were converted into datetime format. From those datetime values, new time-based features were created:
+
+```text
+month
+day_of_week
+hour
+```
+
+The datasets did not share a clean common street-level identifier, so they were merged using these shared time-based features instead of exact street locations.
+
+The final merged dataset includes:
+
+| Column           | Description            |
+| ---------------- | ---------------------- |
+| `month`          | Month of the record    |
+| `day_of_week`    | Day of the week        |
+| `hour`           | Hour of the day        |
+| `traffic_volume` | Average traffic volume |
+| `accident_count` | Number of collisions   |
 
 ---
 
